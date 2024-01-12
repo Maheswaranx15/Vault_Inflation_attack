@@ -3,23 +3,28 @@ Vault shares can be inflated by donating ERC20 token to the vault.
 
 Attacker can exploit this behavior to steal other user's deposits.
 
+## results
+![result!](results.png)
 
-## Results 
-[Results!](results/results.png)
+
+## Source_link 
+[source!](https://solidity-by-example.org/hacks/vault-inflation/)
 
 
-## Example  
+## Example Scenario
 User 0 front runs user 1's deposit.
 
-User 0 deposits 1.
-User 0 donates 100 * 1e18. This inflates the value of each share.
-User 1 deposits 100 * 1e18. This mints 0 shares to user 1.
-User 0 withdraws all 200 * 1e18 + 1.
-Protections
-Min shares -> protects from front running
-Internal balance -> protects from donation
-Dead shares -> contract is first depositor
-Decimal offset (OpenZeppelin ERC4626)
+User 0 deposits 1. <br>
+User 0 donates 100 * 1e18. This inflates the value of each share.<br>
+User 1 deposits 100 * 1e18. This mints 0 shares to user 1.<br>
+User 0 withdraws all 200 * 1e18 + 1.<br>
+<br>
+
+## Protections
+Min shares -> protects from front running<br>
+Internal balance -> protects from donation<br>
+Dead shares -> contract is first depositor<br>
+Decimal offset (OpenZeppelin ERC4626)<br>
 
 ## Foundry
 
